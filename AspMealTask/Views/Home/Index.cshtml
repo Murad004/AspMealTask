@@ -1,0 +1,40 @@
+﻿@model AspMealTask.Models.MealsViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div style="background-color:darkorange; height:100vh">
+        <h1 style="color:white; text-align:center; margin-top:20px;">Welcome To Menu</h1>
+        <div>
+            <h1 style="margin-bottom: 10px; margin-left: 30px; color: green; border-radius: 10px; border: solid green 2px; width: 130px; text-align: center; ">Drinks</h1>
+            @foreach (var drink in Model.Drinks)
+            {
+                <h2 onmouseover="this.style.color='black'" onmouseout="this.style.color='white'" style="transition-duration:1s;margin-left: 40px; cursor: pointer; display: inline-block; color: white;">@drink.Name</h2>
+            }
+        </div>
+        <div>
+            <h1 style="margin-bottom: 10px; margin-left: 30px; color: green; border-radius: 10px; border: solid green 2px; width: 150px; text-align: center; ">Hot Meals</h1>
+            @foreach (var meal in Model.Meals)
+            {
+                <h2 onmouseover="this.style.color='black'" onmouseout="this.style.color='white'" style="transition-duration:1s;margin-left: 40px; cursor: pointer; display: inline-block ;color:white;">@meal.Name</h2>
+            }
+        </div>
+        <div>
+            <h1 style="margin-bottom: 10px; margin-left: 30px; color: green; border-radius: 10px; border: solid green 2px; width: 150px; text-align: center;">Fast Food</h1>
+            @foreach (var fastfood in Model.FastFoods)
+            {
+                <h2 onmouseover="this.style.color='black'" onmouseout="this.style.color='white'" style="transition-duration:1s; margin-left:40px; cursor:pointer; display:inline-block; color:white;">@fastfood.Name</h2>
+            }
+        </div>
+    </div>
+</body>
+</html>
