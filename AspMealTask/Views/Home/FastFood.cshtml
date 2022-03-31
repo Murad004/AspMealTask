@@ -1,8 +1,7 @@
-﻿@model IEnumerable<AspMealTask.Entities.Drink>
+﻿@model IEnumerable<AspMealTask.Entities.FastFood>
 
 @{
     Layout = null;
-
 }
 
 <!DOCTYPE html>
@@ -10,7 +9,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Drink</title>
+    <title>FastFood</title>
 
     <style>
         body {
@@ -34,23 +33,23 @@
             transition-duration: 1s;
         }
 
-        .show_div > img {
-            width: 100px;
-            height: 100px;
-        }
+            .show_div > img {
+                width: 100px;
+                height: 100px;
+                margin-top:5px;
+            }
 
-        .show_div > h2 {
-            margin-top: 5px;
-            color: white;
-            font-size: 2em;
-        }
+            .show_div > h2 {
+                margin-top: 5px;
+                color: white;
+                font-size: 2em;
+            }
     </style>
 
 </head>
 <body>
 
-
-    <h1>Drinks</h1>
+    <h1>Fast Foods</h1>
 
     @foreach (var item in Model)
     {

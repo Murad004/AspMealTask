@@ -1,10 +1,7 @@
 ﻿using AspMealTask.Entities;
 using AspMealTask.Models;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace AspMealTask.Controllers
 {
@@ -16,22 +13,26 @@ namespace AspMealTask.Controllers
                 new Drink
                 {
                     Id=1,
-                    Name="Coca Cola"
+                    Name="Coca Cola",
+                    ImagePath="~/Image/cocacola.png"
                 },
                 new Drink
                 {
                     Id=2,
-                    Name="Fanta"
+                    Name="Fanta",
+                    ImagePath="~/Image/fanta.png"
                 },
                 new Drink
                 {
                     Id=3,
-                    Name="Pepsi"
+                    Name="Pepsi",
+                    ImagePath="~/Image/pepsi.png"
                 },
                 new Drink
                 {
                     Id=4,
-                    Name="Milk"
+                    Name="Milk",
+                    ImagePath="~/Image/milk.png"
                 }
             };
 
@@ -40,22 +41,26 @@ namespace AspMealTask.Controllers
                 new Meal
                 {
                     Id=1,
-                    Name="Kend Colbasi"
+                    Name="Kend Colbasi",
+                    ImagePath="~/Image/kendcolbasi.png"
                 },
                 new Meal
                 {
                     Id=2,
-                    Name="Makaron"
+                    Name="Makaron",
+                    ImagePath="~/Image/makaron.png"
                 },
                 new Meal
                 {
                     Id=3,
-                    Name="Kabab"
+                    Name="Kabab",
+                    ImagePath="~/Image/kabab.png"
                 },
                 new Meal
                 {
                     Id=4,
-                    Name="Ash-qara"
+                    Name="Ash-qara",
+                    ImagePath="~/Image/ashqara.png"
                 }
             };
 
@@ -64,22 +69,26 @@ namespace AspMealTask.Controllers
                 new FastFood
                 {
                     Id=1,
-                    Name="Pizza"
+                    Name="Pizza",
+                    ImagePath="~/Image/pizza.png"
                 },
                 new FastFood
                 {
                     Id=2,
-                    Name="Kartof Free"
+                    Name="Kartof Free",
+                    ImagePath = "~/Image/kartoffree.png"
                 },
                 new FastFood
                 {
                     Id=3,
-                    Name="Doner"
+                    Name="Doner",
+                    ImagePath = "~/Image/doner.png"
                 },
                 new FastFood
                 {
                     Id=4,
-                    Name="Nuggets"
+                    Name="Nuggets",
+                    ImagePath = "~/Image/nuggets.png"
                 }
             };
         public IActionResult Index()
@@ -106,6 +115,20 @@ namespace AspMealTask.Controllers
             return View(drinks);
         }
 
+
+        public IActionResult HotMeal()
+        {
+
+
+            return View(meals);
+        }
+
+        public IActionResult FastFood()
+        {
+
+
+            return View(fastfoods);
+        }
 
 
     }
